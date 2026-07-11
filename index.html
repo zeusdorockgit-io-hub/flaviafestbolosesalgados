@@ -1,290 +1,167 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-        /* 1. Reset básico */
-        body { margin: 0; padding: 0; font-family: sans-serif; background: #1a1a1a; color: #fff; }
-
-        /* 2. Banner */
-        .hero-banner { width: 100%; height: 350px; background: url('assets/banner-dewalt.jpg') center/cover; display: flex; align-items: center; justify-content: center; border-bottom: 3px solid #f1c40f; }
-        
-        /* 3. Estilo do Dourado */
-        .nome-dourado { color: #f1c40f; text-shadow: 2px 2px 4px #000; text-align: center; }
-
-        /* 4. Grade de Fotos */
-        .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px; }
-        .image-grid img { width: 100%; height: 100px; object-fit: cover; border-radius: 4px; }
-        
-        /* 5. Botões */
-        .button-container { display: flex; flex-direction: column; gap: 10px; padding: 20px; max-width: 500px; margin: -50px auto 20px auto; }
-        .btn { padding: 15px; text-align: center; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-      .emblema-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5px; /* Ajuste a distância do texto */
-}
-
-.emblema-neon {
-    width: 100px; /* Tamanho do emblema */
-    height: auto;
-    /* O drop-shadow ilumina o formato do escudo */
-    filter: drop-shadow(0 0 10px #f1c40f) drop-shadow(0 0 20px #f1c40f);
-}
-
-    </style>
-</head>
-
-
+<html lang="pt-br">
+<>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K&D Serviços e Manutenções</title>
+    <title>Flávia Fest Bolos e Salgados</title>
     <style>
-        :root { --bg-color: #0d0d0d; --card-bg: #1a1a1a; --kd-yellow: #f1c40f; }
-        body { font-family: sans-serif; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/fundo-ferramentas.jpg'); background-size: cover; background-attachment: fixed; color: #fff; margin: 0; padding: 20px; }
-        .hero-banner { width: 100%; max-width: 500px; margin: 0 auto 30px auto; padding: 30px; background: url('assets/banner-dewalt.jpg'); background-size: cover; border: 3px solid var(--kd-yellow); border-radius: 10px; text-align: center; }
-        .btn { display: block; padding: 15px; margin: 10px auto; width: 80%; border-radius: 5px; text-decoration: none; font-weight: bold; color: #fff; text-align: center; }
-        .category-block { background-color: var(--card-bg); padding: 20px; margin-bottom: 20px; border-radius: 10px; border-left: 5px solid var(--kd-yellow); }
-        .category-block h3 { color: var(--kd-yellow); margin-top: 0; font-size: 18px; }
-        .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 15px; }
-        .image-grid img { width: 100%; height: 90px; object-fit: cover; border-radius: 4px; }
-        footer { text-align: center; margin-top: 40px; color: #aaa; font-size: 12px; }
-      .image-grid { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
-    margin-top: 15px; 
-}
-.image-grid a { 
-    display: block; 
-    height: 100px; /* Altura fixa para todas */
-    overflow: hidden; 
-    border-radius: 4px;
-}
-.image-grid img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
-    transition: transform 0.3s;
-}
-.image-grid img:hover { transform: scale(1.05); } /* Efeito de zoom ao passar o mouse */
-.image-grid { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
-    margin-top: 15px; 
-}
-.image-grid a { 
-    display: block; 
-    height: 100px; /* Altura fixa para todas as fotos */
-    overflow: hidden; 
-    border-radius: 4px;
-}
-.image-grid img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; /* A MÁGICA: corta a imagem para preencher o quadrado sem distorcer */
-    transition: transform 0.3s;
-}
-.image-grid img:hover { transform: scale(1.05); }
-  /* Remove margens padrão do navegador */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais indesejadas */
-}
+      <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+        background-image: url('./assets/1000007095.png'); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-attachment: fixed; 
+        background-position: center; 
+        font-family: 'Segoe UI', sans-serif; 
+        padding: 10px; 
+    }
 
-/* Ajusta o banner para preencher a largura total */
-.hero-banner { 
-    width: 100vw;       /* Força a largura a ser 100% da largura da janela (view width) */
-    margin: 0;          /* Remove qualquer margem externa */
-    padding: 60px 0;    /* Ajuste a altura conforme necessário */
-    background-image: url('assets/banner-dewalt.jpg'); /* Verifique se este é o nome exato da imagem */
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    border-bottom: 3px solid #f1c40f; 
-  }
-      /* 1. Estilização dos Botões com Pontas Arredondadas e Neon */
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Grade de 2 colunas travada */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mantém sempre 2 colunas */
     gap: 10px;
-    padding: 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    
-    /* Pontas arredondadas (12px cria um visual moderno/técnico) */
-    border-radius: 12px; 
-    
-    /* Transição suave para o efeito de brilho */
-    transition: all 0.3s ease;
-    
-    /* Borda sutil para dar acabamento */
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
 }
 
-/* 2. Cores e Brilho Neon Específico */
-.btn-whatsapp { 
-    background: #25d366; 
-    box-shadow: 0 0 15px #25d366, 0 0 5px #25d366; /* Neon duplo para brilho mais real */
-}
-.btn-instagram { 
-    background: #e1306c; 
-    box-shadow: 0 0 15px #e1306c, 0 0 5px #e1306c; 
-}
-.btn-mapa { 
-    background: #4285f4; 
-    box-shadow: 0 0 15px #4285f4, 0 0 5px #4285f4; 
+.galeria a {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Força todas a serem quadradas */
+    overflow: hidden;    /* Esconde qualquer sobra */
 }
 
-/* 3. Efeito ao tocar */
-.btn:hover {
-    transform: scale(1.02);
-    filter: brightness(1.3);
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Faz a imagem preencher o quadrado sem distorcer */
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: block;      /* Remove espaços extras abaixo da imagem */
 }
+
+
+    /* Ajuste para o título não ficar muito grande */
+    h2 { color: #d63384; text-align: center; font-size: 1.2rem; margin-bottom: 10px; }
+    section { margin-bottom: 20px; background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 15px; }
+</style>
 
     </style>
-</>
-<body>
-    <section class="hero-banner">
-    <div class="banner-content">
-        <!-- Emblema transparente com Neon -->
-        <div class="emblema-container">
-            <img src="assets/logo-kd.png" class="emblema-neon" alt="Logo K&D">
-        </div>
+<h1 style="font-family: 'Brush Script MT', cursive; font-size: 5rem; color: #ff69b4; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; margin-bottom: 5px;">
+    Flávia Fest
+</h1>
+      <!-- ... resto do seu código acima ... -->
+
+    <!-- Adicione o código dos botões exatamente aqui, antes da tag </body> -->
+    <div style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000;">
         
-        <h1 class="nome-dourado">K&D SERVIÇOS E MANUTENÇÕES</h1>
-    </div>
-    </section>
+        <!-- Botão WhatsApp -->
+        <a href="https://wa.me/558781126024" target="_blank" style="background-color: #25d366; color: white; padding: 15px; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 24px; text-align: center; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center;">
+            💬
+        </a>
 
-
-<div class="button-container">
-    <a href="https://wa.me/5515981596886" class="btn btn-whatsapp">
-        <i class="material-icons">chat</i> WHATSAPP
-    </a>
-    
-    <a href="https://www.instagram.com/Kelvin_melo_oficial" class="btn btn-instagram">
-        <i class="material-icons">camera_alt</i> INSTAGRAM
-    </a>
-    
-    <a href="https://maps.app.goo.gl/2X2es25byZkaLdNq5" class="btn btn-mapa">
-        <i class="material-icons">location_on</i> ONDE ESTAMOS
-    </a>
-</div>
-
-    </>
-</>
-
-
-
-    </>
-
-    <!-- Estrutura padrão para as 6 seções -->
-    <div class="category-block">
-        <h3>⚡ SERVIÇOS ELÉTRICOS</h3>
-        <p>Projetos e manutenções seguindo a norma NBR 5410.</p>
-        <div class="image-grid">
-            <a href="assets/eletrico_01.jpg"><img src="assets/eletrico_01.jpg"></a>
-        <a href="assets/eletrico_02.jpg"><img src="assets/eletrico_02.jpg"></a>
-        <a href="assets/eletrico_03.jpg"><img src="assets/eletrico_03.jpg"></a>
-        <a href="assets/eletrico_04.jpg"><img src="assets/eletrico_04.jpg"></a>
-        <a href="assets/eletrico_05.jpg"><img src="assets/eletrico_05.jpg"></a>
-        <a href="assets/eletrico_06.jpg"><img src="assets/eletrico_06.jpg"></a>
-        </div>
+        <!-- Botão Instagram -->
+        <a href="https://instagram.com/Kleciasibelle" target="_blank" style="background-color: #e1306c; color: white; padding: 15px; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 24px; text-align: center; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center;">
+            📸
+        </a>
     </div>
 
-    <div class="category-block">
-        <h3>💡 PERFIS DE LED & ILUMINAÇÃO</h3>
-        <p>Design moderno com cortes de alta precisão e luz difusa.</p>
-        <div class="image-grid">
-            <a href="assets/led_01.jpg"><img src="assets/led_01.jpg"></a>
-        <a href="assets/led_02.jpg"><img src="assets/led_02.jpg"></a>
-        <a href="assets/led_03.jpg"><img src="assets/led_03.jpg"></a>
-        <a href="assets/led_04.jpg"><img src="assets/led_04.jpg"></a>
-        <a href="assets/led_05.jpg"><img src="assets/led_05.jpg"></a>
-        <a href="assets/led_06.jpg"><img src="assets/led_06.jpg"></a>
-        </div>
-    </div>
-
-    <div class="category-block">
-        <h3>⛽ AUTOMAÇÃO DE PORTÕES</h3>
-        <p>Segurança e agilidade em portões de todos os modelos.</p>
-        <div class="image-grid">
-              <a href="assets/portao_01.jpg"><img src="assets/portao_01.jpg"></a>
-        <a href="assets/portao_02.jpg"><img src="assets/portao_02.jpg"></a>
-        <a href="assets/portao_03.jpg"><img src="assets/portao_03.jpg"></a>
-        <a href="assets/portao_04.jpg"><img src="assets/portao_04.jpg"></a>
-        <a href="assets/portao_05.jpg"><img src="assets/portao_05.jpg"></a>
-        <a href="assets/portao_06.jpg"><img src="assets/portao_06.jpg"></a>
-        </div>
-    </div>
-
-    <div class="category-block">
-        <h3>🛡️ SEGURANÇA ELETRÔNICA</h3>
-        <p>Monitoramento CFTV, alarmes e cercas elétricas.</p>
-        <div class="image-grid">
-            <a href="assets/seguranca_01.jpg"><img src="assets/seguranca_01.jpg"></a>
-        <a href="assets/seguranca_02.jpg"><img src="assets/seguranca_02.jpg"></a>
-        <a href="assets/seguranca_03.jpg"><img src="assets/seguranca_03.jpg"></a>
-        <a href="assets/seguranca_04.jpg"><img src="assets/seguranca_04.jpg"></a>
-        <a href="assets/seguranca_05.jpg"><img src="assets/seguranca_05.jpg"></a>
-        <a href="assets/seguranca_06.jpg"><img src="assets/seguranca_06.jpg"></a>
-        </div>
-    </div>
-
-    <div class="category-block">
-        <h3>❄️ AR-CONDICIONADO</h3>
-        <p>Instalação, manutenção preventiva e limpeza técnica.</p>
-        <div class="image-grid">
-            <a href="assets/ar_01.jpg"><img src="assets/ar_01.jpg"></a>
-        <a href="assets/ar_02.jpg"><img src="assets/ar_02.jpg"></a>
-        <a href="assets/ar_03.jpg"><img src="assets/ar_03.jpg"></a>
-        <a href="assets/ar_04.jpg"><img src="assets/ar_04.jpg"></a>
-        <a href="assets/ar_05.jpg"><img src="assets/ar_05.jpg"></a>
-        <a href="assets/ar_06.jpg"><img src="assets/ar_06.jpg"></a>
-        </div>
-    </div>
-
-    <div class="category-block">
-        <h3>🧱 DRYWALL</h3>
-        <p>Acabamento profissional, agilidade e design moderno.</p>
-        <div class="image-grid">
-            <a href="assets/drywall_01.jpg"><img src="assets/drywall_01.jpg"></a>
-        <a href="assets/drywall_02.jpg"><img src="assets/drywall_02.jpg"></a>
-        <a href="assets/drywall_03.jpg"><img src="assets/drywall_03.jpg"></a>
-        <a href="assets/drywall_04.jpg"><img src="assets/drywall_04.jpg"></a>
-        <a href="assets/drywall_05.jpg"><img src="assets/drywall_05.jpg"></a>
-        <a href="assets/drywall_06.jpg"><img src="assets/drywall_06.jpg"></a>
-        </div>
-    </div>
-
-    <footer style="margin-top: 40px; padding: 20px; background-color: #1a1a1a; border-radius: 10px; text-align: center; color: #fff;">
-    
-    <h3 style="color: #f1c40f; margin-bottom: 15px; font-size: 16px; border-bottom: 1px solid #333; padding-bottom: 10px;">
-        HORÁRIO DE FUNCIONAMENTO
-    </h3>
-    
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px; margin-bottom: 20px;">
-        <span class="material-icons" style="color: #f1c40f; font-size: 24px;">schedule</span>
-        <span style="color: #ccc;">Segunda a Sexta: 08:00 às 17:00</span>
-    </div>
-
-    <a href="Https://maps.app.goo.gl/6PydNzUzwopCBWpJ8" style="text-decoration: none; color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px;">
-        <span class="material-icons" style="color: #4285f4; font-size: 24px;">location_on</span>
-        <span style="color: #ccc;">Clique aqui para ver nossa localização</span>
-    </a>
-
-    <p style="font-size: 11px; color: #777; margin-top: 30px;">
-        © 2026 K&D Serviços e Manutenções. Todos os direitos reservados.
-    </p>
-</footer>
-
-
-</bod>
+</body>
 </html>
 
+
+
+
+    <section>
+        <h2>Bolos Decorativos</h2>
+        <p class="descricao">Bolos tradicionais de diversos sabores</p>
+        <di class="galeria">
+          <a href="assets/foto1.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto1.jpg"></a>
+                <a href="assets/foto2.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto2.jpg"></a>
+                <a href="assets/foto3.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto3.jpg"></a>
+                <a href
+                   <a href="assets/foto4.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto4.jpg"></a>
+                <a href="assets/foto5.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto5.jpg"></a>
+                <a href="assets/foto6.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto6.jpg"></a>
+        
+                
+      
+                  
+            </div>
+    </section>
+
+    <<section>
+    <h2>Bolos Decorativos Personalizados</h2>
+    <p></p> Bolos ao seu preferencial para festas e aniverssarios.
+    
+    <div class="galeria">
+      <a href="assets/foto11.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto11.jpg"></a>
+      <a href="assets/foto12.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto12.jpg"></a> 
+        <a href="assets/foto13.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto13.jpg"></a>
+        <a href="assets/foto14.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto14.jpg"></a>
+        <a href="assets/foto15.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto15.jpg"></a>
+      <a href="assets/foto16.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto16.jpg"></a>
+                <a href="assets/foto17.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto17.jpg"></a>
+                <a href="assets/foto17.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto18.jpg"></a>
+                <a href="assets/foto19.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto19.jpg"></a>
+       <a href="assets/foto20.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/foto20.jpg"></a>
+       
+    </div>
+</section>
+                  <!-- Seção de Salgados -->
+<section>
+    <h2>Salgados Deliciosos</h2>
+    <p>Salgadinhos fresquinhos, crocantes e preparados com ingredientes selecionados.</p>
+    
+    <div class="galeria">
+        <!-- 6 imagens organizadas em grade de 2 colunas -->
+        <a href="assets/salgado1.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/salgado1.jpg"></a>
+        <a href="assets/salgado2.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/salgado2.jpg"></a>
+        <a href="assets/salgado3.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/salgado3.jpg"></a>
+        <a href="assets/salgado4.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/salgado4.jpg"></a>
+        <a href="assets/salgado5.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/salgado5.jpg"></a>
+        <a href="assets/salgado6.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/salgado6.jpg"></a>
+    </div>
+</section>
+                
+
+    <section>
+        <h2>Sobremesas</h2>
+        <p class="descricao">Doces gourmet que finalizam qualquer ocasião com elegância e doçura.</p>
+        <div class="galeria"></div>
+    </section>
+
+    
+    <div class="galeria">
+        <!-- 6 imagens de sobremesas -->
+        <a href="assets/sobremesa1.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/sobremesa1.jpg"></a>
+        <a href="assets/sobremesa2.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/sobremesa2.jpg"></a>
+        <a href="assets/sobremesa3.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/sobremesa3.jpg"></a>
+        <a href="assets/sobremesa4.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/sobremesa4.jpg"></a>
+        <a href="assets/sobremesa5.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/sobremesa5.jpg"></a>
+        <a href="assets/sobremesa6.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/sobremesa6.jpg"></a>
+    </div>
+
+                  <!-- Seção de Tortas -->
+<section>
+    <h2>Tortas de Diversos Sabores</h2>
+    <p>Tortas artesanais com recheios generosos e o sabor que você ama.</p>
+    
+    <div class="galeria">
+        <!-- 6 imagens de tortas -->
+        <a href="assets/torta1.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/torta1.jpg"></a>
+        <a href="assets/torta2.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/torta2.jpg"></a>
+        <a href="assets/torta3.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/torta3.jpg"></a>
+        <a href="assets/torta4.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/torta4.jpg"></a>
+        <a href="assets/torta5.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/torta5.jpg"></a>
+        <a href="assets/torta6.jpg" data-pswp-width="1000" data-pswp-height="1000"><img src="assets/torta6.jpg"></a>
+    </div>
+</section>
+
+</>
+
+</>
+</html>
